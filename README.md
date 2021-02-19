@@ -24,4 +24,4 @@ A bank can:
 2. Install dependencies ```npm i```
 3. Compile the contracts ```truffle compile```
 4. Migrate the contracts ```truffle migrate```
-5. Start the app ```npm i```
+5. Start the app ```npm start```
