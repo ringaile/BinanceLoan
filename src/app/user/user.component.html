@@ -1,0 +1,82 @@
+<mat-card>
+    <mat-card-header>Account Info</mat-card-header>
+    <mat-card-content>
+        <mat-card>
+            <mat-card-header>My account</mat-card-header>
+            <mat-card-content>
+                <p>My address: <span id="my-address">{{currentAddress}}</span></p>
+                <button mat-button id="balance" (click)="getBalance()">Get Balance</button>
+                <p>My balance: <span id="my-balance">{{currentBalance}}</span></p>
+            </mat-card-content>
+        </mat-card>
+    </mat-card-content>
+</mat-card>  
+
+<mat-card>
+    <mat-card-header>Customer Panel</mat-card-header>
+    <mat-card-content>
+        <mat-card>
+            <mat-card-header>Submit Loan</mat-card-header>
+            <mat-card-content>
+                <mat-form-field class="bank-address-field">
+                    <input type="text" matInput id="bank-address" placeholder="Bank Address" (change)="setBank($event)">
+                </mat-form-field>
+                <mat-form-field>
+                    <input type="text" matInput id="amount" placeholder="Amount" (change)="setAmount($event)">
+                </mat-form-field>
+                <mat-form-field>
+                    <input type="text" matInput id="interest" placeholder="Interest" (change)="setInterest($event)">
+                </mat-form-field>
+                <mat-form-field>
+                    <input type="text" matInput id="year" placeholder="Year" (change)="setYear($event)">
+                </mat-form-field>
+            <button mat-button id="submit" (click)="submit()">Submit</button>
+            </mat-card-content>
+        </mat-card>
+
+        <mat-card>
+            <mat-card-header>Deposit</mat-card-header>
+            <mat-card-content>
+                <mat-form-field class="deposit-bank-address-field">
+                    <input type="text" matInput id="deposit-bank-address" placeholder="Bank Address" (change)="setDepositBank($event)">
+                </mat-form-field>
+                <mat-form-field>
+                    <input type="text" matInput id="deposit-amount" placeholder="Amount" (change)="setDepositAmount($event)">
+                </mat-form-field>
+            <button mat-button id="deposit-submit" (click)="depositSubmit()">Deposit</button>
+            </mat-card-content>
+        </mat-card>
+    </mat-card-content>
+</mat-card>    
+
+<mat-card>
+    <mat-card-header>Bank Panel</mat-card-header>
+    <mat-card-content>
+        <mat-card>
+            <mat-card-header>Approve / Reject</mat-card-header>
+            <mat-card-content>
+                <button mat-button id="approve" (click)="approve()">Approve</button>
+                <button mat-button id="reject" (click)="reject()">Reject</button>
+            </mat-card-content>
+        </mat-card>
+    </mat-card-content>
+</mat-card>       
+
+<mat-card>
+    <mat-card-header>Loan information</mat-card-header>
+    <mat-card-content>
+        <mat-card>
+            <mat-card-header>Get Loan Info</mat-card-header>
+            <mat-card-content>
+                <button mat-button id="info" (click)="getInfo()">Get Info</button>
+                <p>Bank address: <span id="info-bank-address">{{modelInfo.infoBankAddress}}</span></p>
+                <p>Customer address: <span id="info-customer-address">{{modelInfo.infoCustomerAddress}}</span></p>
+                <p>Loan amount: <span id="info-amount">{{modelInfo.infoAmount}}</span></p>
+                <p>Interest: <span id="info-interest">{{modelInfo.infoInterest}}</span></p>
+                <p>Year: <span id="info-interest">{{modelInfo.infoYear}}</span></p>
+                <p>Monthly Payment: <span id="info-monthly-payment">{{modelInfo.infoMonthlyPayment}}</span></p>
+                <p>Status: <span id="info-status">{{modelInfo.status}}</span></p>
+            </mat-card-content>
+        </mat-card>
+    </mat-card-content>
+</mat-card>     
