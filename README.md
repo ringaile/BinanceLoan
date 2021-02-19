@@ -2,7 +2,7 @@
 
 A dapp to submit and manage Your Loan
 
-Demo: [Click here](https://streamable.com/hrnt69)
+Demo: [Click here](https://youtu.be/22fN1m3-1ko)
 
 Binance Smart Chain Testnet address: [0xc9FE4e8b437017ec7Fb866dA38E8E90d52A2951E](https://testnet.bscscan.com/address/0xc9FE4e8b437017ec7Fb866dA38E8E90d52A2951E)
 
@@ -24,4 +24,4 @@ A bank can:
 2. Install dependencies ```npm i```
 3. Compile the contracts ```truffle compile```
 4. Migrate the contracts ```truffle migrate```
-5. Start the app ```npm i```
+5. Start the app ```npm start```
